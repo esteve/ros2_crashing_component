@@ -1,0 +1,11 @@
+launch:
+    - node_container:
+        pkg: rclcpp_components
+        exec: component_container
+        name: crashing_component_container
+        namespace: ''
+        composable_node:
+            -   pkg: ros2_crashing_component
+                plugin: CrashingNode
+                name: crashing_node
+                namespace: ''
